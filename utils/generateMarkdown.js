@@ -34,19 +34,21 @@ switch(answers.license) {
   * [Test](#test)
   * [Questions](#questions)
   ## Description
-  ${answers.desc}
+  ${answers.description}
   ## Installation
   ${answers.installation}
   ## Usage
   ${answers.usage}
   ## Contributing
   ${answers.contributors}
-  ##License
+  ## License
   ${license}
   ## Test
   ${answers.testing}
   ## Questions
   You may contact me with any questions on GitHub at https://github.com/${answers.username}.
+
+  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 `;
 }
 
