@@ -22,7 +22,9 @@
 
   ![GIF of README Generator](./Assets/ezgif-6-6448bc24869b.gif)
 
-  Video to deployed application: https://drive.google.com/file/d/1Zv3fU7UmxPdihenWGy-hFKF0btqUlWdD/view?usp=sharing
+  Video to deployed application: https://www.awesomescreenshot.com/video/278904?key=74368e76e4124f3f021d329adb3f2bbb
+  
+  https://drive.google.com/file/d/1Zv3fU7UmxPdihenWGy-hFKF0btqUlWdD/view?usp=sharing
 
   ## Contributors
   This was a solo effort as a homework project for the Georgia Tech Full-Stack Web Development Program/
