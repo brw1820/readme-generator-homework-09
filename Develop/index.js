@@ -40,7 +40,7 @@ const questions = [
 
     {
         type: "input",
-        message: "Were there any contributors? If not please say 'none'",
+        message: "How can people contribute to your project?",
         name: "contributors"
 
     },
@@ -48,18 +48,25 @@ const questions = [
     {
         type: "input",
         message: "How would someone test your deployed application?",
-        name: "testing"
+        name: "testing",
+    },
+    
+    {
+        type: "input",
+        message: "How would someone test your deployed application?",
+        name: "testing",
     }
+
+
 
 ];
 
 
 function init() {
-    inquirer
-        .prompt(questions)
+    inquirer.prompt(questions)
         .then(function(answers) {
             console.log(answers)
-                    fs.writeFile("README.md", generateMarkdown(answers), function (err) {
+                    fs.writeFileSync("README.md", generateMarkdown(answers), function (err) {
                         if (err) {
                             throw err;
                         }})
@@ -67,6 +74,6 @@ function init() {
             };
 init();
 
-// modules.export={
+// modules.export {
 //     init:init,
 // }
