@@ -3,24 +3,20 @@ function generateMarkdown(answers) {
 let license;
 switch(answers.license) {
   case "MIT": 
-  license = "This is reserved for MIT license.";
+  license = 
+  "Copyright © 2020 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the Software), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. THE SOFTWARE IS PROVIDED AS IS, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.";
   break;
-  case "Apache":
-    license = "";
+  case "Apache License 2.0":
+    license = "http://www.apache.org/licenses/LICENSE-2.0";
     break;
-    case "BSA":
-      license = "This is reserved for MIT license"
+    case "GNU AGPLv3":
+      license = "https://www.gnu.org/licenses/"
       break;
     default: 
-    license = "This is reserved for MIT license"
+    license = "Copyright © 2020 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the Software), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. THE SOFTWARE IS PROVIDED AS IS, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE."
     break;
 }
-// switch (answers.contributors) {
-//   if case != "none": {
-//     license = "This project was a solo effort."
-//   } else  {
 
-//   }
 
 // if contributor is empty 
 // set reference variable as contributor set as semicolong
@@ -30,14 +26,13 @@ switch(answers.license) {
   return `
   # ${answers.title}
   ## Table of Contents
+  * [Description](#description)
   * [Installation](#installation)
   * [Usage](#usage)
+  * [License](#license)
   * [Contributing](#contributing)
-  * [Badges](#badges)
   * [Test](#test)
   * [Questions](#questions)
-  * [License](#license)
-  * [Credits](#credits)
   ## Description
   ${answers.desc}
   ## Installation
@@ -46,12 +41,12 @@ switch(answers.license) {
   ${answers.usage}
   ## Contributing
   ${answers.contributors}
-  ## Questions
-  You may contact me with any questions on GitHub at https://github.com/${answers.username}.
   ##License
   ${license}
   ## Test
   ${answers.testing}
+  ## Questions
+  You may contact me with any questions on GitHub at https://github.com/${answers.username}.
 `;
 }
 

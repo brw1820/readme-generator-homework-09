@@ -52,10 +52,15 @@ const questions = [
     },
 
     {
-        type: "input",
-        message: "How would someone test your deployed application?",
-        name: "testing",
-    }
+        type: "list",
+        message: "What is your preferred license for your application?",
+        name: "license",
+        choices: [
+          "MIT",
+          "GNU AGPLv3",
+          "Apache License 2.0"
+        ]
+      }
 
 
 
@@ -63,6 +68,7 @@ const questions = [
 
 
 function init() {
+    console.log("init");
     inquirer.prompt(questions)
         .then(function(answers) {
             console.log(answers)
