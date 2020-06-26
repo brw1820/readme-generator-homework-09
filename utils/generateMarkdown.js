@@ -47,7 +47,7 @@ switch(answers.license) {
   ${answers.testing}
   ## Questions
   You may contact me with any questions on GitHub at https://github.com/${answers.username}.
-
+  ##Badges
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 `;
 }
