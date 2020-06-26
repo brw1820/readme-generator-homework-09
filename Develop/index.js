@@ -1,62 +1,104 @@
-var inquirer = require("inquirer");
-var fs = require('fs');
+const inquirer = require("inquirer");
+const fs = require('fs');
+// const { EXDEV } = require("constants");
+const generateMarkdown = require("./utils/generateMarkdown")
+
 // array of questions for user
 const questions = [
+    // questions to user using "inquirer"
+    {
+        type: "input",
+        message: "What is your GitHub username?",
+        name: "username"
+    },
 
-];
+    {
+        type: "input",
+        message: "What is the title of your project?",
+        name: "title"
+    },
 
-inquirer.prompt([
-  {
-    type: "input",
-    name: "name",
-    message: "What is your name?"
-  },
-  {
-    type: "checkbox",
-    message: "What languages do you know?",
-    name: "stack",
-    choices: [
-      "HTML", 
-      "CSS", 
-      "JavaScript", 
-      "MySQL"
-    ]
-  },
-  {
-    type: "list",
-    message: "What is your preferred method of communication?",
-    name: "contact",
-    choices: [
-      "email",
-      "phone",
-      "telekinesis"
-    ]
-  }
-]).then(function(data) {
+    {
+        type: "input",
+        message: "What is your GitHub repository?",
+        name: "repo"
+    },
 
-  var filename = data.name.toLowerCase().split(' ').join('') + ".json";
+    {
+        type: "input",
+        message: "Please provide a short description of your project here:",
+        name: "desc"
+    },
 
-  fs.writeFile(filename, JSON.stringify(data, null, '\t'), function(err) {
+    {
+        type: "input",
+        message: "Please provide instructions for properly installing your application here:",
+        name: "install"
+    },
 
-    if (err) {
-      return console.log(err);
+    {
+        type: "input",
+        message: "Please provide instructions on how to use your application here:",
+        name: "usage"
+    },
+
+    {
+        type: "input",
+        message: "Were there any contributors on your project?",
+        name: "contribution"
+
+    },
+    {
+        type: "list",
+        message: "Which license are you using?",
+        name: "License:",
+        choices: [
+          "MIT", 
+          "ISC", 
+          "Apache", 
+        ]},
+
+    {
+        type: "input",
+        message: "How would someone test your application?",
+        name: "test"
     }
 
-    console.log("Success!");
+        ];
 
-  });
-});
+// const response = [
 
+// ];
+
+
+function init() {
+    inquirer
+        .prompt(questions)
+        .then(function(answers) {
+            console.log(answers);
+
+            // var filename = answers.title.toLowerCase().split(' ').join('') + ".json";
+          
+            fs.writeFile("README.md", generateMarkdown(answers), function(err) {
+          
+              if (err) {
+                return console.log(err);
+              }
+            });
+        });
+    };
+              console.log("Success!");
 
 // function to write README file
-function writeToFile(fileName, data) {
-}
-
-// function to initialize program
-function init() {
-
-}
+// fs.appendFile("README.md", generateMarkdown(answers), function (err) {
+//     if (err) {
+//         throw err;
+//     }})
 
 // function call to initialize program
 init();
 
+
+module.exports = {
+    inti:init,
+};
