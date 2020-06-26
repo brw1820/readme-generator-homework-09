@@ -50,7 +50,7 @@ const questions = [
         message: "How would someone test your deployed application?",
         name: "testing",
     },
-    
+
     {
         type: "input",
         message: "How would someone test your deployed application?",
