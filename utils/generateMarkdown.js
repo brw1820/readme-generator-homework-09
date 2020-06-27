@@ -42,7 +42,7 @@ switch(answers.license) {
   ## Contributing
   ${answers.contributors}
   ## License
-  ${license}
+  ${answers.license}
   ## Test
   ${answers.testing}
   ## Questions
