@@ -20,7 +20,7 @@
   This repository contains a README.md file generator by using node.js.  Open index.js in your source code editor such as Visual Studio Code or iTerm and install 'inquirer' into the folder with the command 'npm install inquirer'. Open your terminal and proceed to input the command 'node index.js'. Complete the prompts, and you will be given your generated README.md file.
   
   Link to video:https://drive.google.com/file/d/1sLoI35RZGETAaURKkQefCQABqW3_nWnx/view
-  ![deployed repo](./Assets/Setup-Awesome-Screenshot.gif)
+  ![project gif](./Assets/projectgif.gif)
   ## License
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
   ## Contributors
