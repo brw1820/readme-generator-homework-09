@@ -34,7 +34,7 @@ const questions = [
   {
     type: "input",
     message:
-      "Please provide instructions for for properly using your application here:",
+      "Please provide instructions for properly using your application here:",
     name: "usage",
   },
 
@@ -55,16 +55,6 @@ const questions = [
     message: "What is your preferred license for your application?",
     name: "license",
     choices: ["MIT", "GNU AGPLv3", "Apache License 2.0"],
-  },
-  {
-    type: "input",
-    message: "What year is it?",
-    name: "year",
-  },
-  {
-    type: "input",
-    message: "What is your full name?",
-    name: "fullname",
   },
 ];
 
