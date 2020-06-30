@@ -31,6 +31,9 @@ switch(answers.license) {
 
   return `
   # ${answers.title}
+  
+  ## Description
+  ${answers.description}
   ## Table of Contents
   * [Description](#description)
   * [Installation](#installation)
@@ -39,21 +42,19 @@ switch(answers.license) {
   * [Contributing](#contributing)
   * [Test](#test)
   * [Questions](#questions)
-  ## Description
-  ${answers.description}
   ## Installation
   ${answers.installation}
   ## Usage
   ${answers.usage}
-  ## Contributing
-  ${answers.contributors}
   ## License
   ${answers.license}
+  ## Contributing
+  ${answers.contributors}
   ## Test
   ${answers.testing}
   ## Questions
-  You may contact me with any questions on GitHub at https://github.com/${answers.username}.
-  ##Badges
+  ${answers.questions}
+  ## Badges
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 `;
 }

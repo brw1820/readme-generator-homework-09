@@ -5,16 +5,6 @@ const fs = require("fs");
 const questions = [
   {
     type: "input",
-    message: "What is your GitHub username?",
-    name: "username",
-  },
-  {
-    type: "input",
-    message: "What is your GitHub repository called?",
-    name: "repo",
-  },
-  {
-    type: "input",
     message: "What is the title of your project?",
     name: "title",
   },
@@ -56,13 +46,18 @@ const questions = [
     name: "license",
     choices: ["MIT", "GNU AGPLv3", "Apache License 2.0"],
   },
+  {
+    type: "input",
+    message: "Where does one go if they have any questions",
+    name: "questions",
+  },
 ];
 
 function init() {
   console.log("init");
   inquirer.prompt(questions).then(function (answers) {
     console.log(answers);
-    fs.writeFileSync("README.md", generateMarkdown(answers), function (err) {
+    fs.writeFileSync("MYREADME.md", generateMarkdown(answers), function (err) {
       if (err) {
         throw err;
       }
